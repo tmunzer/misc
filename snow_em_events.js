@@ -229,6 +229,7 @@ function process_event_common(event) {
             var evt = new GlideRecord("em_event");
             evt.initialize();
             evt.source = "Juniper Mist";
+            evt.node = device.hostname;
             evt.event_class = "Juniper Mist";
             evt.additional_info = JSON.stringify(event);
             evt.description = device.description;
@@ -317,6 +318,7 @@ function process_event_marvis(event) {
             var evt = new GlideRecord("em_event");
             evt.initialize();
             evt.source = "Juniper Mist";
+            evt.node = device.hostname;
             evt.event_class = "Juniper Mist";
             evt.additional_info = JSON.stringify(event);
             evt.description = entity.description;
